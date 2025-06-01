@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les Robots Humanoïdes et l’IA</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1b2a;
+      color: #e0e1dd;
+      margin: 0;
+      padding: 0;
+    }
+    header, nav, section {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      background-color: #1a1a2e;
+      color: #fca311;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #14213d;
+      border-bottom: 2px solid #fca311;
+    }
+    nav a {
+      color: #fca311;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    section {
+      display: none;
+      background-color: #1b263b;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-top: 2rem;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      border-left: 6px solid #fca311;
+      padding-left: 1rem;
+      color: #fca311;
+      font-size: 1.8rem;
+    }
+    .intro {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+    .intro img {
+      max-width: 180px;
+      margin: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #fca311;
+    }
+    .card {
+      padding: 1rem 2rem;
+      line-height: 1.6;
+    }
+    img.illustration {
+      display: block;
+      margin: 1rem auto;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #fca311;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Les Robots Humanoïdes et l'Intelligence Artificielle</h1>
+</header>
+
+<div class="intro active" id="accueil">
+  <p>Bienvenue sur ce site dédié à l'évolution des robots humanoïdes de 2000 à 2025. Ce projet présente les recherches menées lors de 4 séances centrées sur la robotique, l'intelligence artificielle, l’apprentissage machine et les questions éthiques que cela soulève.</p>
+  <p>Mais d’abord… <strong>qu’est-ce qu’un robot humanoïde ?</strong> Il s’agit d’un robot conçu pour ressembler à un être humain dans son apparence ou son comportement, et souvent utilisé pour interagir avec les humains ou accomplir des tâches spécifiques.</p>
+  <div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Honda_ASIMO.jpg" alt="ASIMO" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Pepper_robot.jpg" alt="Pepper" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Sophia_robot_2018.jpg" alt="Sophia" />
+  </div>
+</div>
+
+<nav>
+  <a onclick="showSection('accueil')">Accueil</a>
+  <a onclick="showSection('seance1')">Séance 1</a>
+  <a onclick="showSection('seance2')">Séance 2</a>
+  <a onclick="showSection('seance3')">Séance 3</a>
+  <a onclick="showSection('seance4')">Séance 4</a>
+</nav>
+
+<section id="seance1">
+  <h2>📘 Séance 1 – Histoire des Robots (2000–2025)</h2>
+  <div class="card">
+    <p>Depuis l’an 2000, les robots humanoïdes ont connu des évolutions impressionnantes. De simples machines programmées, ils sont devenus intelligents, autonomes, parfois même citoyens. Voici une frise chronologique de cette évolution.</p>
+    <ul>
+      <li><strong>2000 – ASIMO :</strong> robot bipède emblématique développé par Honda.</li>
+      <li><strong>2006 – NAO :</strong> robot éducatif programmable utilisé dans les écoles.</li>
+      <li><strong>2011 – Pepper :</strong> robot émotionnel capable de détecter les émotions humaines.</li>
+      <li><strong>2016 – Sophia :</strong> citoyenne robot saoudienne, reconnue mondialement.</li>
+      <li><strong>2020 – Atlas :</strong> robot athlétique capable de sauts et mouvements complexes.</li>
+      <li><strong>2023 – Digit :</strong> robot de livraison bipède utilisé dans les entrepôts.</li>
+      <li><strong>2025 – Figure 01 :</strong> projet de robot d’assistance industrielle avancé.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Séances 2, 3 et 4 seront injectées ensuite -->
+<script>
+  function showSection(id) {
+    document.querySelectorAll(".intro, section").forEach(el => el.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+</script>
